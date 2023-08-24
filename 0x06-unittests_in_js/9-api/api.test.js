@@ -10,7 +10,7 @@ describe('Integration Testing', () => {
         method: 'GET',
       };
 
-      request(options, function (error, response, body) {
+      request(options, function (_error, response, body) {
         expect(response.statusCode).to.equal(200);
         expect(body).to.equal('Welcome to the payment system');
         done();
@@ -25,7 +25,7 @@ describe('Integration Testing', () => {
         method: 'GET',
       };
 
-      request(options, function (error, response, body) {
+      request(options, function (_error, response, body) {
         expect(response.statusCode).to.equal(200);
         expect(body).to.equal('Payment methods for cart 12');
         done();
@@ -40,7 +40,7 @@ describe('Integration Testing', () => {
         method: 'GET',
       };
 
-      request(options, function (error, response, body) {
+      request(options, function (_error, response, body) {
         expect(response.statusCode).to.equal(200);
         expect(body).to.equal('Payment methods for cart 1');
         done();
@@ -55,7 +55,7 @@ describe('Integration Testing', () => {
         method: 'GET',
       };
 
-      request(options, function (error, response, body) {
+      request(options, function (_error, response, body) {
         expect(response.statusCode).to.equal(200);
         expect(body).to.equal('Payment methods for cart 123');
         done();
@@ -70,7 +70,7 @@ describe('Integration Testing', () => {
         method: 'GET',
       };
 
-      request(options, function (error, response, body) {
+      request(options, function (_error, response, _body) {
         expect(response.statusCode).to.equal(404);
         done();
       });
